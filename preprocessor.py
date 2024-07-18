@@ -17,9 +17,9 @@ def preprocess(data):
     
     # convert dates type
     try:
-        df['message_date'] = pd.to_datetime(df['message_date'], format='%d/%m/%y, %H:%M - ')
+        df['message_date'] = pd.to_datetime(df['message_date'], format="%d/%m/%Y, %H:%M - ")
     except:
-        df['message_date'] = pd.to_datetime(df['message_date'], format='%m/%d/%y, %H:%M - ')
+        df['message_date'] = pd.to_datetime(df['message_date'], format=format="%d/%m/%Y, %H:%M - ")
     df.rename(columns={'message_date': 'date'}, inplace=True)
 
     users = []
